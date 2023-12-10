@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Challenge</title>
+</head>
+<section class="index-page vh-100" >
+<div style="padding-top:15px; text-align: center; height: 75px;">
+<button style="margin-right:25px" class="btn btn-primary" (click)="getPlayerWithMaxMatches()" type ="submit">Get Player</button>
+<button class="btn btn-primary" (click)="getAllPlayers()" type ="submit">Get All Player</button>
+</div>
+<body>
+    <div class = "search-table index-table">
+        <table class="table table-borderes">
+            <thead class="thead">
+                <tr>
+                    <th>Player Id</th>
+                    <th>Player Name</th>
+                    <th>Jersey Number</th>
+                    <th>Role</th>
+                    <th>Total Match</th>
+                    <th>Team Name</th>
+                    <th>Country</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+                <tr *ngFor="let player of playerDetails">
+                    <td>{{player.playerID}}</td>
+                    <td>{{player.playerName}}</td>
+                    <td>{{player.jerseyNumber}}</td>
+                    <td>{{player.role}}</td>
+                    <td>{{player.totalMatches}}</td>
+                    <td>{{player.teamName}}</td>
+                    <td>{{player.country}}</td>
+                    <td>{{player.description}}</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</section>
+</html>
